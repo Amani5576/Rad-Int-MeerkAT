@@ -33,4 +33,3 @@ This document provides an overview of the observational data collected with the 
 
 This observation provides essential insights captured by the MeerKAT telescope, although the log and scheduling information were unavailable at the time of release, Long and Short baselines made by different bperis of Antennas gave good insights to regions of RFI when plotting visibility.
 """
-anything
