@@ -31,6 +31,22 @@ This document provides an overview of the observational data collected with the 
 
 ---
 
-This observation provides essential insights captured by the MeerKAT telescope, although the log and scheduling information were unavailable at the time of release, Long and Short baselines made by different bperis of Antennas gave good insights to regions of RFI when plotting visibility.
+This observation provides essential insights captured by the MeerKAT telescope, although the log and scheduling information were unavailable at the time of release, Long and Short baselines made by different pairs of Antennas gave good insights to regions of RFI when plotting visibility.
 """
-anything
+
+# Overview of Tables in the Script
+
+The script utilizes the **`daskms`** package to handle Measurement Set (MS) data from radio interferometry. This package is highly efficient for working with large observational datasets.
+
+## Tables being accessed:
+
+- **ANTENNA table**: Contains information about the antennas used in the observation.
+- **FEED table**: Includes data on the feed systems, such as the receptor angles.
+- **FIELD table**: Provides information on the observed fields, like the target's sky coordinates.
+- **OBSERVATION table**: Contains metadata about the observation session, like start and end times.
+- **POLARIZATION table**: Details polarization products available in the dataset.
+- **PROCESSOR table**: Information about processing steps applied to the data.
+- **SOURCE table**: Includes details about the sources being observed.
+- **SPECTRAL_WINDOW table**: Describes the frequency channels and bandwidth of the observation.
+- **STATE table**: Keeps track of the state of the observation, such as calibrator or science target identifiers.
+"""
