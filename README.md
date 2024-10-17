@@ -55,29 +55,138 @@ The script utilizes the **`daskms`** package to handle Measurement Set (MS) data
 
 The following table summarizes the shapes and dimensions of each item in the 1548939342.ms dataset file:
 
-| **Key**                | **Shape**            | **Dim**       |
-|-----------------------|----------------------|----------------|
-| PROCESSOR_ID          | (31875,)             | 1              |
-| STATE_ID              | (31875,)             | 1              |
-| WEIGHT                | (31875, 2)           | 2               |
-| ANTENNA1              | (31875,)              | 1               |
-| FLAG_CATEGORY         | (31875, 1, 1024, 2)  | 4               |
-| INTERVAL              | (31875,)             | 1              |
-| ARRAY_ID              | (31875,)             | 1              |
-| FIELD_ID              | (31875,)             | 1              |
-| FEED2                 | (31875,)              | 1               |
-| WEIGHT_SPECTRUM       | (31875, 1024, 2)      | 3               |
-| OBSERVATION_ID        | (31875,)             | 1              |
-| DATA_DESC_ID          | (31875,)             | 1              |
-| UVW                   | (31875, 3)           | 2              |
-| FLAG_ROW              | (31875,)             | 1              |
-| EXPOSURE              | (31875,)             | 1              |
-| IMAGING_WEIGHT        | (31875, 1024)        | 2              |
-| DATA                  | (31875, 1024, 2)     | 3              |
-| FLAG                  | (31875, 1024, 2)     | 3              |
-| SIGMA                 | (31875, 2)           | 2              |
-| TIME                  | (31875,)             | 1              |
-| ANTENNA2              | (31875,)              | 1               |
-| FEED1                 | (31875,)              | 1               |
-| TIME_CENTROID         | (31875,)             | 1              |
-| SCAN_NUMBER           | (31875,)             | 1              |
+<table style="display: inline-block; vertical-align: top; margin-right: 20px;">
+    <tr>
+        <th>Key</th>
+        <th>Shape</th>
+        <th>Dimensions</th>
+    </tr>
+    <tr>
+        <td>PROCESSOR_ID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>STATE_ID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>WEIGHT</td>
+        <td>(31875, 2)</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>ANTENNA1</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>FLAG_CATEGORY</td>
+        <td>(31875, 1, 1024, 2)</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>INTERVAL</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>ARRAY_ID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>FIELD_ID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>FEED2</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+</table>
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr>
+        <th>Key</th>
+        <th>Shape</th>
+        <th>Dimensions</th>
+    </tr>
+    <tr>
+        <td>WEIGHT_SPECTRUM</td>
+        <td>(31875, 1024, 2)</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>OBSERVATION_ID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>DATA_DESC_ID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>UVW</td>
+        <td>(31875, 3)</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>FLAG_ROW</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>EXPOSURE</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>IMAGING_WEIGHT</td>
+        <td>(31875, 1024)</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>DATA</td>
+        <td>(31875, 1024, 2)</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>FLAG</td>
+        <td>(31875, 1024, 2)</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>SIGMA</td>
+        <td>(31875, 2)</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>TIME</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>ANTENNA2</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>FEED1</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>TIME_CENTROID</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>SCAN_NUMBER</td>
+        <td>(31875,)</td>
+        <td>1</td>
+    </tr>
+</table>
