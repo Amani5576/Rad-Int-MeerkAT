@@ -229,3 +229,50 @@ The following table summarizes the shapes and dimensions of each item in the 154
 Ensure to refer to the specific implementation details within the respective files for further insights.
 
 ![MArking interesting region of RFI for further assessment](3.5_plot.png)
+
+
+## Functions in histograming.py
+
+### 1. `skew(distribution)`
+- **Description**: Calculates the value of the skewness for a given distribution, using np.mean() and np.std() functions.
+- **Parameters**:
+  - `distribution`: Array of values.
+- **Returns**: Skewness value for the given distribution.
+
+### 2. `kurt(distribution)`
+- **Description**: Calculates the value of the kurtosis for a given distribution, using np.mean() and np.std() functions.
+- **Parameters**:
+  - `distribution`: Array of values.
+- **Returns**: Kurtosis value for the given distribution.
+
+### 3. `gaussian(x,A,x0,sigma,D)`
+- **Description**: Calculates the values of a Gaussian distribution given specific input values.
+- **Parameters**:
+  - `x`: Array of x values.
+  - `A`: Gaussian amplitude (peak value - continuum value).
+  - `x0`: Gaussian central wavelength/mean.
+  - `sigma`: Standard deviation.
+  - `D`: Continuum value.
+- **Returns**: Array of values following a Gaussian distribution.
+
+### 4. `gauss_fit(x,y,guess)`
+- **Description**: Calculates the Best Fit Gaussian given input x and y arrays, and initial guess.
+- **Parameters**:
+  - `x`: x-value array.
+  - `y`: y-value array.
+  - `guess`: Array of parameter initial guesses.
+- **Returns**: Best fit Gaussian parameters.
+
+### 5. `plotting_hists(ini_guess_rfi, ini_guess_clean, xlims, ylims=[0,])`
+- **Description**: 
+- **Parameters**:
+  - `ini_guess_rfi`: Initial guess for "RFI" curve Best Fit Gaussian.
+  - `ini_guess_clean`: Initial guess for "Clean" curve Best Fit Gaussian.
+  - `xlims`: x-axis histogram limits.
+  - `ylims`: y-axis histogram limits.
+- **Returns**: None. Plots histogram and prints out Standard Deviation, Mean, Skewness, and Kurtosis values for RFI and Clean regions. 
+
+
+
+
+
