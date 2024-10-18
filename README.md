@@ -32,7 +32,7 @@ And you're all set!
 Phase center of MeerKAT pointing towards the Southern Sky with satellite trajectories tracing paths that might lead to visibility contamination from RFI. (Click on image to see different trajecotries from different satellites during the same day as the observation data.)
 
 [![Watch the video](Click_vid_img.png)](output.mp4)
-(See ```Satellite_interpretation.py```)
+(See ```Satellite_interpretation.py```
 
 # **Observation Summary**
 
@@ -185,6 +185,8 @@ The following table summarizes the shapes and dimensions of each item in the 154
     plot_visibility_data(1, 2, "Antenna 1", "Antenna 2", "Short", frequency_array)
     ```
 
+    ![Visibility plot](25th_longest_baseline_visibiity_plot.png)
+
 ### 4. `progressive_rfi_filter(visibility_amplitudes, frequencies, initial_kernel=29, sigma_threshold=1)`
 - **Description**: Applies a progressive median filter to detect RFI (Radio Frequency Interference) in visibility data.
 - **Parameters**:
@@ -224,5 +226,6 @@ The following table summarizes the shapes and dimensions of each item in the 154
     visibility_amplitudes = ds["DATA"]  # Example extraction
     progressive_rfi_filter(visibility_amplitudes, frequency_array)
     ```
-This documentation provides an overview of the functions in `PACK_func.py` and their interaction with data extraction processes facilitated by `PACK.py` and `main.py`. Ensure to refer to the specific implementation details within the respective files for further insights.
+Ensure to refer to the specific implementation details within the respective files for further insights.
 
+![MArking interesting region of RFI for further assessment](3.5_plot.png)
