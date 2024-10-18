@@ -1,10 +1,36 @@
 # Rad-Int-MeerkAT
 Using MeerKat Radio interferometry data to analyse and understand Regions of Radio Interferance with ```daskms```
 
+## Reproducing the Environment
+
+To recreate the environment in which this code was run, you can use the `daskms_environment.yml` file provided in this repository. Follow the steps below:
+
+1. Make sure you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed on your system.
+
+2. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+
+3. Create the conda environment using the `daskms_environment.yml` file:
+
+   ```bash
+   conda env create -f daskms_environment.yml
+   ```
+
+4. Activate the environment:
+
+   ```bash
+   conda activate iraf27
+   ```
+
+And you're all set!
+
 # **Observation Summary**
 
 This document provides an overview of the observational data collected with the **MeerKAT** telescope. Below are the key details of the observation and its metadata:
-
 ---
 
 ## **Project Information**
@@ -55,138 +81,57 @@ The script utilizes the **`daskms`** package to handle Measurement Set (MS) data
 
 The following table summarizes the shapes and dimensions of each item in the 1548939342.ms dataset file:
 
-<table style="display: inline-block; vertical-align: top; margin-right: 20px;">
-    <tr>
-        <th>Key</th>
-        <th>Shape</th>
-        <th>Dimensions</th>
-    </tr>
-    <tr>
-        <td>PROCESSOR_ID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>STATE_ID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>WEIGHT</td>
-        <td>(31875, 2)</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>ANTENNA1</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>FLAG_CATEGORY</td>
-        <td>(31875, 1, 1024, 2)</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>INTERVAL</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>ARRAY_ID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>FIELD_ID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>FEED2</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-</table>
+| **Key**                | **Shape**            | **Dim**       |
+|-----------------------|----------------------|----------------|
+| PROCESSOR_ID          | (31875,)             | 1              |
+| STATE_ID              | (31875,)             | 1              |
+| WEIGHT                | (31875, 2)           | 2               |
+| ANTENNA1              | (31875,)              | 1               |
+| FLAG_CATEGORY         | (31875, 1, 1024, 2)  | 4               |
+| INTERVAL              | (31875,)             | 1              |
+| ARRAY_ID              | (31875,)             | 1              |
+| FIELD_ID              | (31875,)             | 1              |
+| FEED2                 | (31875,)              | 1               |
+| WEIGHT_SPECTRUM       | (31875, 1024, 2)      | 3               |
+| OBSERVATION_ID        | (31875,)             | 1              |
+| DATA_DESC_ID          | (31875,)             | 1              |
+| UVW                   | (31875, 3)           | 2              |
+| FLAG_ROW              | (31875,)             | 1              |
+| EXPOSURE              | (31875,)             | 1              |
+| IMAGING_WEIGHT        | (31875, 1024)        | 2              |
+| DATA                  | (31875, 1024, 2)     | 3              |
+| FLAG                  | (31875, 1024, 2)     | 3              |
+| SIGMA                 | (31875, 2)           | 2              |
+| TIME                  | (31875,)             | 1              |
+| ANTENNA2              | (31875,)              | 1               |
+| FEED1                 | (31875,)              | 1               |
+| TIME_CENTROID         | (31875,)             | 1              |
+| SCAN_NUMBER           | (31875,)             | 1              |
 
-<table style="display: inline-block; vertical-align: top;">
-    <tr>
-        <th>Key</th>
-        <th>Shape</th>
-        <th>Dimensions</th>
-    </tr>
-    <tr>
-        <td>WEIGHT_SPECTRUM</td>
-        <td>(31875, 1024, 2)</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>OBSERVATION_ID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>DATA_DESC_ID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>UVW</td>
-        <td>(31875, 3)</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>FLAG_ROW</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>EXPOSURE</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>IMAGING_WEIGHT</td>
-        <td>(31875, 1024)</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>DATA</td>
-        <td>(31875, 1024, 2)</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>FLAG</td>
-        <td>(31875, 1024, 2)</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>SIGMA</td>
-        <td>(31875, 2)</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>TIME</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>ANTENNA2</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>FEED1</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>TIME_CENTROID</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>SCAN_NUMBER</td>
-        <td>(31875,)</td>
-        <td>1</td>
-    </tr>
-</table>
+# Measurement Set Tables and their associative Keys
+## Antenna Table
+- MOUNT, TYPE, NAME, DISH_DIAMETER, POSITION, STATION, OFFSET, FLAG_ROW
+
+## Feed Table
+- BEAM_ID, SPECTRAL_WINDOW_ID, ANTENNA_ID, TIME, INTERVAL, POL_RESPONSE, RECEPTOR_ANGLE, FEED_ID, POSITION, NUM_RECEPTORS, POLARIZATION_TYPE, BEAM_OFFSET
+
+## Field Table
+- DELAY_DIR, NUM_POLY, SOURCE_ID, TIME, NAME, CODE, PHASE_DIR, REFERENCE_DIR, FLAG_ROW
+
+## Observation Table
+- PROJECT, SCHEDULE_TYPE, RELEASE_DATE, TIME_RANGE, LOG, TELESCOPE_NAME, SCHEDULE, OBSERVER, FLAG_ROW
+
+## Polarization Table
+- CORR_PRODUCT, NUM_CORR, CORR_TYPE, FLAG_ROW
+
+## Processor Table
+- TYPE, MODE_ID, TYPE_ID, SUB_TYPE, FLAG_ROW
+
+## Source Table
+- SOURCE_ID, SPECTRAL_WINDOW_ID, REST_FREQUENCY, TIME, DIRECTION, INTERVAL, NAME, CALIBRATION_GROUP, PROPER_MOTION, NUM_LINES, CODE
+
+## Spectral Window Table
+- FREQ_GROUP, TOTAL_BANDWIDTH, IF_CONV_CHAIN, NUM_CHAN, NAME, NET_SIDEBAND, FLAG_ROW, MEAS_FREQ_REF, REF_FREQUENCY, CHAN_WIDTH, FREQ_GROUP_NAME, EFFECTIVE_BW, RESOLUTION, CHAN_FREQ
+
+## State Table
+- OBS_MODE, REF, CAL, LOAD, SIG, SUB_SCAN, FLAG_ROW
