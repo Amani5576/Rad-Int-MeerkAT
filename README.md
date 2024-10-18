@@ -28,6 +28,7 @@ To recreate the environment in which this code was run, you can use the `daskms_
 
 And you're all set!
 
+# Phase center of MeerKAT pointing towards the Southern Sky with satellite trajectories tracing paths that might lead to visibility contamination from RFI. (Click video to dwonload and see different trajecotries from diffrent satellites during the same day as the observation data. (31/01/2019))
 [![Watch the video](Click_vid_img.png)](output.mp4)
 
 # **Observation Summary**
@@ -65,6 +66,23 @@ This document provides an overview of the observational data collected with the 
 
 This document describes the key functions defined in `PACK_func.py` and their roles in the data extraction process using `daskms` from `PACK.py` and `main.py`.
 
+
+## Integration with PACK.py and main.py
+
+### Extraction Process in PACK.py
+- The `PACK.py` script utilizes `daskms` to perform data extraction from dask.ms tables (declaring all variable dictionaries/tables to be used).
+- **Example**:
+    ```python
+    import daskms
+
+    # Example of extracting data using daskms
+    ds = daskms.open("path/to/data.ms")
+    visibility_data = ds["DATA"]  # Example extraction
+
+    # Visualizing the extracted data
+    plot_visibility_data(1, 2, "Antenna 1", "Antenna 2", "Short", frequency_array)
+    ```
+    
 ## Functions in PACK_func.py
 
 ### 1. `argmax_more(num, arr)`
@@ -131,23 +149,6 @@ This document describes the key functions defined in `PACK_func.py` and their ro
     ```python
     from PACK_func import plotting_hists
     plotting_hists(clean_data_list, rfi_data_list, x_limits, y_limits)
-    ```
-
-## Integration with PACK.py and main.py
-
-### Extraction Process in PACK.py
-- The `PACK.py` script utilizes `daskms` to perform data extraction and calls functions from `PACK_func.py` for data processing and visualization.
-- **Example**:
-    ```python
-    from PACK_func import plot_visibility_data
-    import daskms
-
-    # Example of extracting data using daskms
-    ds = daskms.open("path/to/data.ms")
-    visibility_data = ds["DATA"]  # Example extraction
-
-    # Visualizing the extracted data
-    plot_visibility_data(1, 2, "Antenna 1", "Antenna 2", "Short", frequency_array)
     ```
 
 ### Main Execution in main.py
