@@ -63,8 +63,71 @@ This document provides an overview of the observational data collected with the 
 
 ---
 
-##Overview of main scripts
-Below describes the key functions defined in `PACK_func.py` and `daskms` data extraction bby `PACK.py` with useful vizualisation and calcualtions handled in the `main.py`.
+
+# Overview of Tables
+
+The script utilizes the **`daskms`** package to handle Measurement Set (MS) data from radio interferometry. This package is highly efficient for working with large observational datasets.
+
+# Data Structure Overview
+
+The following table summarizes the shapes and dimensions of each item in the 1548939342.ms dataset file:
+
+| **Key**                | **Shape**            | **Dim**       |
+|-----------------------|----------------------|----------------|
+| PROCESSOR_ID          | (31875,)             | 1              |
+| STATE_ID              | (31875,)             | 1              |
+| WEIGHT                | (31875, 2)           | 2               |
+| ANTENNA1              | (31875,)              | 1               |
+| FLAG_CATEGORY         | (31875, 1, 1024, 2)  | 4               |
+| INTERVAL              | (31875,)             | 1              |
+| ARRAY_ID              | (31875,)             | 1              |
+| FIELD_ID              | (31875,)             | 1              |
+| FEED2                 | (31875,)              | 1               |
+| WEIGHT_SPECTRUM       | (31875, 1024, 2)      | 3               |
+| OBSERVATION_ID        | (31875,)             | 1              |
+| DATA_DESC_ID          | (31875,)             | 1              |
+| UVW                   | (31875, 3)           | 2              |
+| FLAG_ROW              | (31875,)             | 1              |
+| EXPOSURE              | (31875,)             | 1              |
+| IMAGING_WEIGHT        | (31875, 1024)        | 2              |
+| DATA                  | (31875, 1024, 2)     | 3              |
+| FLAG                  | (31875, 1024, 2)     | 3              |
+| SIGMA                 | (31875, 2)           | 2              |
+| TIME                  | (31875,)             | 1              |
+| ANTENNA2              | (31875,)              | 1               |
+| FEED1                 | (31875,)              | 1               |
+| TIME_CENTROID         | (31875,)             | 1              |
+| SCAN_NUMBER           | (31875,)             | 1              |
+
+
+# Measurement Set Tables and their associative Keys
+
+## Antenna Table
+- MOUNT, TYPE, NAME, DISH\_DIAMETER, POSITION, STATION, OFFSET, FLAG\_ROW
+
+## Feed Table
+- BEAM\_ID, SPECTRAL\_WINDOW\_ID, ANTENNA\_ID, TIME, INTERVAL, POL\_RESPONSE, RECEPTOR\_ANGLE, FEED\_ID, POSITION, NUM\_RECEPTORS, POLARIZATION\_TYPE, BEAM\_OFFSET
+
+## Field Table
+- DELAY\_DIR, NUM\_POLY, SOURCE\_ID, TIME, NAME, CODE, PHASE\_DIR, REFERENCE\_DIR, FLAG\_ROW
+
+## Observation Table
+- PROJECT, SCHEDULE\_TYPE, RELEASE\_DATE, TIME\_RANGE, LOG, TELESCOPE\_NAME, SCHEDULE, OBSERVER, FLAG\_ROW
+
+## Polarization Table
+- CORR\_PRODUCT, NUM\_CORR, CORR\_TYPE, FLAG\_ROW
+
+## Processor Table
+- TYPE, MODE\_ID, TYPE\_ID, SUB\_TYPE, FLAG\_ROW
+
+## Source Table
+- SOURCE\_ID, SPECTRAL\_WINDOW\_ID, REST\_FREQUENCY, TIME, DIRECTION, INTERVAL, NAME, CALIBRATION\_GROUP, PROPER\_MOTION, NUM\_LINES, CODE
+
+## Spectral Window Table
+- FREQ\_GROUP, TOTAL\_BANDWIDTH, IF\_CONV\_CHAIN, NUM\_CHAN, NAME, NET\_SIDEBAND, FLAG\_ROW, MEAS\_FREQ\_REF, REF\_FREQUENCY, CHAN\_WIDTH, FREQ\_GROUP\_NAME, EFFECTIVE\_BW, RESOLUTION, CHAN\_FREQ
+
+## State Table
+- OBS\_MODE, REF, CAL, LOAD, SIG, SUB\_SCAN, FLAG\_ROW
 
 ## Integration with PACK.py and main.py
 
