@@ -32,7 +32,7 @@ And you're all set!
 Phase center of MeerKAT pointing towards the Southern Sky with satellite trajectories tracing paths that might lead to visibility contamination from RFI. (Click on image to see different trajecotries from different satellites during the same day as the observation data.)
 
 [![Watch the video](Click_vid_img.png)](output.mp4)
-(See ```Satellite_interpretation.py```
+(See ```Satellite_interpretation.py```)
 
 # **Observation Summary**
 
