@@ -74,7 +74,7 @@ This document describes the key functions defined in `PACK_func.py` and their ro
 - **Usage**:
     ```python
     from PACK_func import argmax_more
-    index = argmax_more(0, my_array)  # Get the index of the maximum value
+    index = argmax_more(0, my_array)  # Getting index of 0th Longest Baseline
     ```
 
 ### 2. `argmin_more(num, arr)`
@@ -86,7 +86,7 @@ This document describes the key functions defined in `PACK_func.py` and their ro
 - **Usage**:
     ```python
     from PACK_func import argmin_more
-    index = argmin_more(0, my_array)  # Get the index of the minimum value
+    index = argmin_more(0, my_array)  # Getting index of 0th Shortest Baseline
     ```
 
 ### 3. `plot_visibility_data(a1, a2, name1, name2, baseline_type, frequencies)`
