@@ -28,6 +28,8 @@ To recreate the environment in which this code was run, you can use the `daskms_
 
 And you're all set!
 
+[![Watch the video](https://img.youtube.com/vi/THE_VIDEO_ID/maxresdefault.jpg)](path/to/VID.mp4)
+
 # **Observation Summary**
 
 This document provides an overview of the observational data collected with the **MeerKAT** telescope. Below are the key details of the observation and its metadata:
