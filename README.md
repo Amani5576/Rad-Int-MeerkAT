@@ -63,12 +63,8 @@ This document provides an overview of the observational data collected with the 
 
 ---
 
-# Documentation of Functions in PACK_func.py
-
-## Overview
-
-This document describes the key functions defined in `PACK_func.py` and their roles in the data extraction process using `daskms` from `PACK.py` and `main.py`.
-
+##Overview of main scripts
+Below describes the key functions defined in `PACK_func.py` and `daskms` data extraction bby `PACK.py` with useful vizualisation and calcualtions handled in the `main.py`.
 
 ## Integration with PACK.py and main.py
 
