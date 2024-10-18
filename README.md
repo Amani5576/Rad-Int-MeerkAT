@@ -23,12 +23,12 @@ To recreate the environment in which this code was run, you can use the `daskms_
 4. Activate the environment:
 
    ```bash
-   conda activate iraf27
+   conda activate daskms
    ```
 
 And you're all set!
 
-[![Watch the video](https://img.youtube.com/vi/THE_VIDEO_ID/maxresdefault.jpg)](path/to/VID.mp4)
+[![Watch the video](Click_vid_img.png)](output.mp4)
 
 # **Observation Summary**
 
